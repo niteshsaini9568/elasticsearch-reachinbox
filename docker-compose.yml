@@ -5,11 +5,15 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
-      - path.data=/tmp/esdata 
     ports:
       - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
     networks:
       - esnet
+
+volumes:
+  esdata:
 
 networks:
   esnet:
