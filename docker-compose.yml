@@ -12,9 +12,6 @@ services:
     networks:
       - esnet
 
-volumes:
-  esdata:
-
 networks:
   esnet:
     driver: bridge
